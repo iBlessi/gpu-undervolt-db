@@ -5,7 +5,7 @@
     "license": "CC BY 4.0",
     "schema_version": 1,
     "updated": "2026-07-24",
-    "contribute": "Submit a pull request adding a row to data/undervolt_results.json. See .github/PULL_REQUEST_TEMPLATE/undervolt-result.md for the required fields and methodology. Every numeric value must cite a resolvable source.",
+    "contribute": "Submit a pull request against https://github.com/iBlessi/gpu-undervolt-db adding one object to the \"results\" array in data/undervolt_results.json. The repository's .github/PULL_REQUEST_TEMPLATE.md fills in automatically with the required fields and methodology, and an automated check validates schema, plausibility, and sourcing on every PR. Every numeric value must cite a resolvable source.",
     "fields": {
       "id": "unique slug for the row (gpu-board-setting)",
       "gpu": "canonical card model, e.g. 'RTX 5080' or 'RX 9070 XT'",
@@ -30,7 +30,8 @@
       "date": "YYYY-MM-DD the row was added or last verified",
       "flagged": "true if the outlier-flag script flagged this row (do not set by hand)",
       "flag_reason": "why it was flagged (set by the script)"
-    }
+    },
+    "repository": "https://github.com/iBlessi/gpu-undervolt-db"
   },
   "results": [
     {
@@ -49,11 +50,11 @@
       "temp_drop_c": null,
       "fps_delta_pct": 0,
       "stability_hours": null,
-      "test_method": "Long demanding-game sessions + Superposition loops that hold the card at the locked clock (FurMark does NOT validate a curve undervolt)",
-      "source_type": "editorial-firstparty",
+      "test_method": "Settings follow the worked example in our RTX 5080 undervolt guide; the ~50W saving sits inside the 30-70W range that guide cites from community testing at hardware review sites. Not a logged before/after measurement on our own card.",
+      "source_type": "community-consensus",
       "source_url": "/articles/rtx-5080-undervolt-guide-2026/",
       "source_url_2": "",
-      "submitter": "TechFuelHQ (LK Wood IV, first-party)",
+      "submitter": "TechFuelHQ (published community range, not a logged first-party run)",
       "date": "2026-07-24",
       "flagged": false,
       "flag_reason": ""
